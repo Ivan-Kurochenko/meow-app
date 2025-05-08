@@ -1,6 +1,6 @@
 import Warning from "./Warning.jsx";
 
-const Question = ({onYesClick, onNoClick, noClickTimes}) => {
+const Question = ({onClick, noClickTimes}) => {
 
     return (
         <>
@@ -12,10 +12,10 @@ const Question = ({onYesClick, onNoClick, noClickTimes}) => {
                         width: `calc(${noClickTimes + 1}*80px)`
                     } : null)
                 }}
-                        onClick={onYesClick}>Yes
+                        onClick={onClick}>Yes
                 </button>
                 {noClickTimes <= 2 && (
-                    <button className="no" onClick={onNoClick}>No</button>
+                    <button className="no" onClick={onClick}>No</button>
                 )}
             </div>
 
