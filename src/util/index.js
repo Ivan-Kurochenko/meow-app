@@ -1,5 +1,5 @@
 export const sendMessage = (message) => {
-    fetch('https://clicking-report-bot.onrender.com/what-she-said',
+    fetch('https://clicking-report-bot.onrender.com/report',
         {
             method: 'POST', headers: {
                 'Content-Type': 'application/json'
