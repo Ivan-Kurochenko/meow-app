@@ -1,4 +1,6 @@
-const AnswerInput = ({totalFlowers, onSubmit}) => {
+const AnswerInput = (
+    // {totalFlowers, onSubmit}
+) => {
   return (
     <div
       style={{
