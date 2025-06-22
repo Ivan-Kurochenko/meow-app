@@ -7,8 +7,15 @@ function getRandomFlowerEmoji() {
 }
 
 function getRandomPosition() {
-  const top = Math.random() * 90;
-  const left = Math.random() * 90;
+  const top =
+    Math.random() < 0.5
+      ? Math.floor(Math.random() * 45) + 1
+      : Math.floor(Math.random() * 36) + 55;
+  const left =
+    Math.random() < 0.5
+      ? Math.floor(Math.random() * 34) + 1
+      : Math.floor(Math.random() * 30) + 60;
+
   return { top, left };
 }
 

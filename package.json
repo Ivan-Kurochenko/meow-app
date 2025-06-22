@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run prettier && vite build",
+    "build": "npm run lint && npm run prettier-all && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prettier": "npx prettier . --write"
+    "prettier-all": "npx prettier . --write"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.76.1",
