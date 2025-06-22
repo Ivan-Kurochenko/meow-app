@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && npm run prettier-all && vite build",
+    "predeploy": "cp CNAME build/",
     "lint": "eslint .",
     "preview": "vite preview",
     "prettier-all": "npx prettier . --write"
