@@ -1,12 +1,14 @@
 import { useState } from "react";
 
-const AnswerInput = ({ correctFlowers, onSubmit }) => {
-  const [value, setValue] = useState();
+const AnswerInput = ({ totalFlowers, onCorrectAnswer }) => {
+  const [answer, setAnswer] = useState(0);
 
   const handleSubmit = () => {
-    console.log(correctFlowers);
-
-    onSubmit(correctFlowers);
+    if (answer === totalFlowers) {
+      onCorrectAnswer(totalFlowers);
+    } else {
+      alert("Incorrect answer!");
+    }
   };
 
   return (
@@ -18,16 +20,18 @@ const AnswerInput = ({ correctFlowers, onSubmit }) => {
         transform: "translate(-50%, -50%)",
         zIndex: 9999,
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
       }}
     >
-      <input
-        type="text"
-        value={value}
-        onChange={setValue}
-        placeholder="Count the flowers"
-      />
-      <button onClick={handleSubmit}>Submit</button>
+      <label>Count the flowers</label>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <input
+          type="number"
+          value={answer}
+          onChange={(e) => setAnswer(Number(e.target.value))}
+        />
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
     </div>
   );
 };
