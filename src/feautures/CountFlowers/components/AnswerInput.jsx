@@ -1,14 +1,19 @@
 import {useState} from "react";
 
-const AnswerInput = ({totalFlowers, onCorrectAnswer}) => {
+const AnswerInput = ({totalFlowers, onSubmit}) => {
     const [answer, setAnswer] = useState(0);
 
     const handleSubmit = () => {
         if (answer === totalFlowers) {
-            onCorrectAnswer(totalFlowers);
-        } else {
-            alert("Incorrect answer!");
+            onSubmit(false);
+            return;
         }
+
+        if (answer === totalFlowers + 1) {
+            onSubmit(true);
+            return;
+        }
+        alert("Incorrect answer!");
     };
 
     return (

@@ -9,8 +9,8 @@ function getRandomFlowerEmoji() {
 function getRandomPosition() {
   const top =
     Math.random() < 0.5
-      ? Math.floor(Math.random() * 10) + 30
-      : Math.floor(Math.random() * 60) + 15;
+      ? Math.floor(Math.random() * 5) + 40
+      : Math.floor(Math.random() * 50) + 20;
   const left =
     Math.random() < 0.5
       ? Math.floor(Math.random() * 10) + 30
