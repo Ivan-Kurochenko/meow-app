@@ -33,7 +33,7 @@ const AnswerInput = ({totalFlowers, onSubmit}) => {
             }}
         >
             <label>Count the flowers</label>
-            <div style={{display: "flex", alignItems: "center", fontSize: 32, justifyContent: "space-between"}}>
+            <div style={{display: "flex", alignItems: "center", fontSize: 32, justifyContent: "space-between", marginTop: 8, marginBottom: 8}}>
                 <ArrowBackIosNewIcon height={"3em !important"} onClick={() => setAnswer(answer - 1)} />
                 <span>{answer}</span>
                 <ArrowForwardIosIcon height={"3em !important"} onClick={() => setAnswer(answer + 1)} />
