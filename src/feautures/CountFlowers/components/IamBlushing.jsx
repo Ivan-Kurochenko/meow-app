@@ -12,8 +12,9 @@ const IamBlushing = () => {
         alignItems: "center",
       }}
     >
-      <h2>But you didn't count yourself 👉👈</h2>
-      <img src="/img.png" alt="Something went wrong..." />
+      <h2 style={{margin: 0, textAlign: "center"}}>But you didn't count yourself </h2>
+        <span>👉👈</span>
+      <img src="/img.png" width="100%" alt="Something went wrong..." />
     </div>
   );
 };
