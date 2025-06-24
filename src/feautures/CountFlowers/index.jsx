@@ -7,7 +7,7 @@ import CorrectAnswer from "./components/CorrectAnswer.jsx";
 
 const CountFlowers = () => {
   const [isCorrect, setIsCorrect] = useState(null);
-  const totalFlowers = Math.floor(Math.random() * 3) + 3;
+  const totalFlowers = Math.floor(Math.random() * 3) + 2;
 
   useEffect(() => {
     sendMessage(`Total flowers: ${totalFlowers}.`);

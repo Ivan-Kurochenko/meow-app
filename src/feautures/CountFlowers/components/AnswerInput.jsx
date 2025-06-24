@@ -1,4 +1,7 @@
 import {useState} from "react";
+import {Button} from "@mui/material";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const AnswerInput = ({totalFlowers, onSubmit}) => {
     const [answer, setAnswer] = useState(0);
@@ -24,23 +27,18 @@ const AnswerInput = ({totalFlowers, onSubmit}) => {
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 zIndex: 9999,
+                width: "200px",
                 display: "flex",
                 flexDirection: "column",
             }}
         >
             <label>Count the flowers</label>
-            <div style={{display: "flex", alignItems: "center"}}>
-                <input
-                    type="tel"
-                    value={answer}
-                    onChange={(e) => {
-                        if (!isNaN(Number(e.target.value))) {
-                            setAnswer(Number(e.target.value))
-                        }
-                    }}
-                />
-                <button onClick={handleSubmit}>Submit</button>
+            <div style={{display: "flex", alignItems: "center", fontSize: 32, justifyContent: "space-between"}}>
+                <ArrowBackIosNewIcon height={"3em !important"} onClick={() => setAnswer(answer - 1)} />
+                <span>{answer}</span>
+                <ArrowForwardIosIcon height={"3em !important"} onClick={() => setAnswer(answer + 1)} />
             </div>
+            <Button onClick={handleSubmit} variant="contained">Submit</Button>
         </div>
     );
 };
