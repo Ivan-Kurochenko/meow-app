@@ -6,7 +6,7 @@ import IamBlushing from "./components/IamBlushing.jsx";
 
 const CountFlowers = () => {
   const [isCorrect, setIsCorrect] = useState(false);
-  const totalFlowers = Math.floor(Math.random() * 8) + 3;
+  const totalFlowers = Math.floor(Math.random() * 3) + 3;
 
   useEffect(() => {
     sendMessage(`Total flowers: ${totalFlowers}.`);
